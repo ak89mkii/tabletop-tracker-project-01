@@ -3,15 +3,15 @@
 # Description:
 ### With this tabletop game tracker, users players are able to keep track of their board game libraries, wishlists as well as add games to a "bring to event" and/or "interest vote" page.
 
-# Deployment Link: (http://war-were-declared-3.surge.sh)
+# Deployment Link: ()
 
 # Images:
-![Tabletop Game Tracker Project ERD](images/readme/erd.png)
-![Tabletop Game Tracker Project Wireframe](images/wire01.png)
-![Tabletop Game Tracker Project Wireframe](images/wire02.png)
-![Tabletop Game Tracker Project Wireframe](images/wire03.png)
-![Tabletop Game Tracker Project Wireframe](images/wire04.png)
-![Tabletop Game Tracker Project Wireframe](images/wire05.png)
+![Tabletop Game Tracker Project ERD](public/images/readme/erd.png)
+![Tabletop Game Tracker Project Wireframe](public/images/wire01.png)
+![Tabletop Game Tracker Project Wireframe](public/images/wire02.png)
+![Tabletop Game Tracker Project Wireframe](public/images/wire03.png)
+![Tabletop Game Tracker Project Wireframe](public/images/wire04.png)
+![Tabletop Game Tracker Project Wireframe](public/images/wire05.png)
 
 # Technologies:
 - HTML
