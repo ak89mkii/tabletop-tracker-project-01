@@ -7,11 +7,11 @@
 
 # Images:
 ![Tabletop Game Tracker Project ERD](public/images/readme/erd.png)
-![Tabletop Game Tracker Project Wireframe](public/images/wire01.png)
-![Tabletop Game Tracker Project Wireframe](public/images/wire02.png)
-![Tabletop Game Tracker Project Wireframe](public/images/wire03.png)
-![Tabletop Game Tracker Project Wireframe](public/images/wire04.png)
-![Tabletop Game Tracker Project Wireframe](public/images/wire05.png)
+![Tabletop Game Tracker Project Wireframe](public/images/readme/wire01.png)
+![Tabletop Game Tracker Project Wireframe](public/images/readme/wire02.png)
+![Tabletop Game Tracker Project Wireframe](public/images/readme/wire03.png)
+![Tabletop Game Tracker Project Wireframe](public/images/readme/wire04.png)
+![Tabletop Game Tracker Project Wireframe](public/images/readme/wire05.png)
 
 # Technologies:
 - HTML
