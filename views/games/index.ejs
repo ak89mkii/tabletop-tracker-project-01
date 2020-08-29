@@ -1,0 +1,31 @@
+<!-- The GAME COLLECTION page -->
+
+<%- include('../partials/header') %>
+
+<body>
+    <h1>Tabletop Collection / Library</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Airline:</th>
+          <th>Airport:</th>
+          <th>Flight No:</th>
+          <th>Departs:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% flights.forEach((f) => { %>
+          <tr>
+            <td><%= f.airline %></td>
+            <td><%= f.airport %></td>
+            <td><%= f.flightNo %></td>
+            <td><%= f.departs %></td>
+            <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <br>
+    <a href="/flights/new">Add Flight</a>
+
+<%- include('../partials/footer') %>
