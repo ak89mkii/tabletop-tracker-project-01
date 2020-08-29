@@ -1,7 +1,7 @@
 # Tabletop Game Tracker Project 02:
 
 # Description:
-### With this tabletop game tracker, users players are able to keep track of their board game libraries, wishlists as well as add games to a "bring to event" and/or "interest vote" page.
+### With this tabletop game tracker, users are able to keep track of their board game libraries, wishlists as well as add games to a "bring to event" and/or "interest vote" page.
 
 # Deployment Link: ()
 
