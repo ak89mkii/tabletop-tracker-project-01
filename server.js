@@ -21,7 +21,7 @@ const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 // After template
 const indexRouter = require('./routes/index');
-// const gamesRouter = require('./routes/games');
+const gamesRouter = require('./routes/games');
 const bringsRouter = require('./routes/brings');
 // const votesRouter = require('./routes/votes');
 const wishlistsRouter = require('./routes/wishlists');
@@ -52,7 +52,7 @@ app.use('/', usersRouter);
 app.use('/auth', authRouter)
 // After template
 app.use('/', indexRouter);
-// app.use('/games', gamesRouter);
+app.use('/', gamesRouter);
 app.use('/', bringsRouter);
 // app.use('/votes', votesRouter);
 app.use('/', wishlistsRouter);
