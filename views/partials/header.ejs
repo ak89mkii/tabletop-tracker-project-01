@@ -16,18 +16,27 @@
     </div>
     <div class="navTitle">DiceDex.io (eventually)</div>
     <ul class="nav nav-pills">
+      <% if (user) { %>
       <li class="nav-item">
         <a class="nav-link"  href="/">Library</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  href="/games/wishlists">Wishlist</a>
+        <a class="nav-link"  href="/wishlists/new">Wishlist</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  href="/games/brings">Bring</a>
+        <a class="nav-link"  href="/brings/new">Bring</a>
       </li>
       <li class="nav-item">
         <a class="nav-link"  href="/votes/index">Vote</a>
       </li>
+      <% } else { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/auth/google">Login with Google</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/games/new">Search Games</a>
+        </li>
+      <% } %>
     </ul>
     <div>
       <form action="/games/new" method="GET">

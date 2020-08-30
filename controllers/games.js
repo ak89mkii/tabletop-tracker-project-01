@@ -14,7 +14,8 @@ module.exports = {
 }
 
 function index(req, res) {
-    Game.find({}, function(err, games) {
-        res.render('games/index')
+    User.find({})
+    .then(users => {
+      res.render('games/', { user: req.user, users })
     })
 }

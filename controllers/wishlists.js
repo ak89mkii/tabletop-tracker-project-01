@@ -1,5 +1,12 @@
-// const Game = require('../models/game')
+const User = require('../models/wishlist')
 
-// module.exports = {
-//     create
-// }
+module.exports = {
+    new: newWishlists
+}
+
+function newWishlists(req, res) {
+    User.find({})
+    .then(users => {
+      res.render('wishlists/new', { user: req.user, users })
+    })
+}
