@@ -21,10 +21,10 @@ const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 // After template
 const indexRouter = require('./routes/index');
-const gamesRouter = require('./routes/games');
-const bringsRouter = require('./routes/brings');
-const votesRouter = require('./routes/votes');
-const wishlistsRouter = require('./routes/wishlists');
+// const gamesRouter = require('./routes/games');
+// const bringsRouter = require('./routes/brings');
+// const votesRouter = require('./routes/votes');
+// const wishlistsRouter = require('./routes/wishlists');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -48,14 +48,14 @@ app.use(passport.session());
 
 // router middleware
 // mount all routes with appropriate base paths
-app.use('/users', usersRouter); // "user" was missing before.
+app.use('/', usersRouter); 
 app.use('/auth', authRouter)
 // After template
 app.use('/', indexRouter);
-app.use('/games', gamesRouter);
-app.use('/', bringsRouter);
-app.use('/votes', votesRouter);
-app.use('/', wishlistsRouter);
+// app.use('/games', gamesRouter);
+// app.use('/', bringsRouter);
+// app.use('/votes', votesRouter);
+// app.use('/', wishlistsRouter);
 
 // invalid request, send 404 page
 app.use(function(req, res) {
