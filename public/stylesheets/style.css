@@ -10,5 +10,40 @@
   padding-top: 20px;
 }
 
+/* After Template: */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+  margin: 0 auto;
+  align-items: center;
+  background-color: slategrey;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.nav-link {
+  color: darkgrey;
+}
+
+#search {
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 250px;
+  padding: 5px;
+}
+
+#searchButton {
+  background-color: darkgrey;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 
 

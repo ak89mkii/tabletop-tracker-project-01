@@ -4,29 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title><%= "DiceDex" %></title>
 </head>
 <header>
   <nav class="nav">
-    <h1>Nav Area</h1>
+    <div>
+      <img height="50" id="avatarPhoto" src="'http://theoldreader.com/kittens/300/300/' %>" alt="">
+    </div>
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link active"  href="/games">Library</a>
+        <a class="nav-link"  href="/games">Library</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active"  href="/games/wishlists">Wishlist</a>
+        <a class="nav-link"  href="/games/wishlists">Wishlist</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active"  href="/games/brings">Bring</a>
+        <a class="nav-link"  href="/games/brings">Bring</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active"  href="/votes">Vote</a>
+        <a class="nav-link"  href="/votes">Vote</a>
       </li>
     </ul>
-    <form action="/games/new" method="POST">
-      <input type="submit" value="Search Results">
-    </form>
+    <div>
+      <form action="/games/new" method="GET">
+        <input id="search" type="text" value="Search for Game">
+        <input id="searchButton" type="submit" value="Submit">
+      </form>
+    </div>
   </nav>
 </header>
 <body>
