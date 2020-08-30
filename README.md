@@ -23,6 +23,7 @@
 - Mongoose
 - Google APIs
 - getbootstrap.com
+- thenounproject.com
 
 # Pseudocode Outline:
 
@@ -37,3 +38,4 @@
 // https://console.developers.google.com/apis/dashboard
 // https://cloud.mongodb.com/v2
 // https://getbootstrap.com/docs/4.0/components/navs/
+// https://thenounproject.com/term/dice/10652/
