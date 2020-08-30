@@ -5,13 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title><%= "flights" %></title>
+  <title><%= "DiceDex" %></title>
 </head>
 <header>
   <nav class="nav">
     <h1>Nav Area</h1>
-    <a href="/flights">All Flights</a>
-    <a href="/flights/new">Add Flight</a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active"  href="/games">Library</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active"  href="/games/wishlists">Wishlist</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active"  href="/games/brings">Bring</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active"  href="/votes">Vote</a>
+      </li>
+    </ul>
+    <form action="/games/new" method="POST">
+      <input type="submit" value="Search Results">
+    </form>
   </nav>
 </header>
 <body>
