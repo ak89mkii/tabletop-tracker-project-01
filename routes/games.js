@@ -13,7 +13,6 @@ router.get('/games', isLoggedIn, gamesCtrl.index)
 // router.post('/:slug/wishlists',isLoggedIn, gamesCtrl.addToWishlist)
 // router.delete('/:slug/wishlists', isLoggedIn, gamesCtrl.removeFromWishlist)
 
-
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
     res.redirect("/auth/google");

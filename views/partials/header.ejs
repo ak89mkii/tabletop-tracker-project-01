@@ -16,7 +16,6 @@
     </div>
     <div class="navTitle">DiceDex.io (eventually)</div>
     <ul class="nav nav-pills">
-      <% if (user) { %>
       <li class="nav-item">
         <a class="nav-link"  href="/games">Library</a>
       </li>
@@ -32,15 +31,10 @@
       <li class="nav-item">
         <a class="nav-link"  href="/auth/logout">Logout</a>
       </li>
-      <% } else { %>
-      <li class="nav-item">
-          <a class="nav-link" href="/auth/google">Login with Google</a>
-      </li>
-      <% } %>
     </ul>
     <div>
-      <form action="/games/new" method="GET">
-        <input id="search" type="text" placeholder="Board Game Search">
+      <form action="/pokeQuery" method="POST">
+        <input id="search" type="text" name="query" placeholder="Board Game Search">
         <input id="searchButton" type="submit" value="Submit">
       </form>
     </div>

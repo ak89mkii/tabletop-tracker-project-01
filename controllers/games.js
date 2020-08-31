@@ -1,6 +1,4 @@
 const Game = require('../models/game')
-const Vote = require('../models/vote')
-
 
 module.exports = {
 //     new: newGames,
