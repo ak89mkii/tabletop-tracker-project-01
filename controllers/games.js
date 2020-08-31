@@ -21,7 +21,7 @@ function pokeView(req, res) {
 function pokeQuery(req, res) {
   axios.get(`https://pokeapi.co/api/v2/pokemon/${req.body.query.toLowerCase()}`)
   .then(response => {
-      console.log(response.data.species.name)
+      console.log(response.data.results)
       res.render('games/new', { pokemon: response.data })
   })
 }
