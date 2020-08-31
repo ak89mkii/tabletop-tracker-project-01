@@ -68,12 +68,14 @@ body {
 }
 
 .gameImg {
-  height: 300px;
-  width:400px;
+  height: 500px;
+  width: 500px;
   border-style: solid;
   border-radius: 10px;
-  border-width: 10px;
+  border-width: 5px;
   border-color: black;
+  margin: 0 auto;
+
 }
 
 

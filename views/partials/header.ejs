@@ -12,6 +12,7 @@
 </head>
 <header>
   <nav class="nav">
+    <% if (user) { %>
     <div class="navTitle">
       <img height="50" id="avatarPhoto" src="/images/dice.png">
     </div>
@@ -32,6 +33,11 @@
       <li class="nav-item">
         <a class="nav-link"  href="/auth/logout">Logout</a>
       </li>
+    <% } else { %>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/google">Login with Google</a>
+      </li>
+    <% } %>
     </ul>
     <div id="search" class="gcse-search"></div>
   </nav>

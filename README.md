@@ -22,6 +22,7 @@
 - MongoDB Atlas
 - Mongoose
 - Google APIs
+- Google Programmable Search
 - getbootstrap.com
 - thenounproject.com
 
@@ -41,3 +42,4 @@
 // https://thenounproject.com/term/dice/10652/
 // https://medium.com/codingthesmartway-com-blog/getting-started-with-axios-166cb0035237
 // https://bgg-json.azurewebsites.net/
+// https://stackoverflow.com/questions/12909332/how-to-logout-of-an-application-where-i-used-oauth2-to-login-with-google
