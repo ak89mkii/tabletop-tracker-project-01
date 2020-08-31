@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Ctrl = require('../controllers/pokemons')
+const Ctrl = require('../controllers/games')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
