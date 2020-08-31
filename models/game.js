@@ -2,14 +2,8 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const gameSchema = new Schema({
-    title: String,
-    minPlayers: Number,
-    maxPlayers: Number,
-    slug: String,
-    gameId: Number,
-    rank: Number,
-    image: String,
-    name: String
+    title: {type: String},
+    players: {type: Number}
 }, {
   timestamps: true
 })

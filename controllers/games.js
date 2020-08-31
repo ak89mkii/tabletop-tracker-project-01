@@ -3,13 +3,13 @@ const axios = require('axios')
 
 module.exports = {
 //     new: newGames,
-//     create, 
+  create, 
   index,
-//     show,
-//     addToLibrary,
-//     addToWishlist,
-//     addToBring,
-//     addToVotePage
+//  show,
+//  addToLibrary,
+//  addToWishlist,
+//  addToBring,
+//  addToVotePage
 }
 
 function index(req, res) {
@@ -18,4 +18,14 @@ function index(req, res) {
       res.render('games/index', { user: req.user, users })
     })
 }
+
+function create(req, res) {
+  const game = new Game(req.body)
+  game.save(function(err) {
+    console.log(game)
+    res.redirect('/games/')
+  })
+}
+
+
 

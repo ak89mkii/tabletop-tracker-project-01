@@ -2,7 +2,26 @@
 
 <%- include('../partials/header') %>
 
-<body>
-    <h1>Tabletop Collection / Library</h1>
+<h1>Tabletop Collection / Library</h1>
+
+<h1>Add a New Game</h1>
+<form method="POST" action="/">  
+    <label class="label">Game Title:</label>
+        <input type="text" name="title">
+    <label class="label">Number of Player:</label>
+        <input type="text"name="players">
+    <input type="submit" value="Add Game">
+</form>
+
+<h1>Library</h1>
+    <div>
+        <img src="<%=  %>" class="card-img-top" alt="...">
+    </div>
+    <% users.forEach((g) => { %>
+    <div>
+        <label class="label">Game Title:</label> <%= g.title %>
+        <label class="label">Number of Players:</label> <%= g.players %>
+    </div>
+    <% }); %>
 
 <%- include('../partials/footer') %>

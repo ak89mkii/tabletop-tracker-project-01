@@ -51,11 +51,8 @@ body {
 }
 
 #search {
-  border: none;
-  border-radius: 5px;
-  color: white;
-  height: 100px;
-  width: 300px;
+  width: 400px;
+  margin: 5px;
 }
 
 

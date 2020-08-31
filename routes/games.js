@@ -3,7 +3,7 @@ const router = express.Router();
 const gamesCtrl = require('../controllers/games')
 
 // router.get('/new', isLoggedIn, gamesCtrl.new)
-// router.post('/', isLoggedIn, gamesCtrl.create)
+router.post('/', isLoggedIn, gamesCtrl.create)
 router.get('/games', isLoggedIn, gamesCtrl.index)
 // router.get('/:slug', isLoggedIn, gamesCtrl.show)
 // router.post('/:slug/brings',isLoggedIn, gamesCtrl.addToBring)
