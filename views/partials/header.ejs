@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script async src="https://cse.google.com/cse.js?cx=162dbd6fb9ab74aab"></script>
   <title><%= "DiceDex" %></title>
 </head>
 <header>
@@ -32,12 +33,7 @@
         <a class="nav-link"  href="/auth/logout">Logout</a>
       </li>
     </ul>
-    <div>
-      <form action="/pokeQuery" method="POST">
-        <input id="search" type="text" name="query" placeholder="Board Game Search">
-        <input id="searchButton" type="submit" value="Submit">
-      </form>
-    </div>
+    <div id="search" class="gcse-search"></div>
   </nav>
 </header>
 <body>

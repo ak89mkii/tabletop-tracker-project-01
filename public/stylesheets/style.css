@@ -51,19 +51,11 @@ body {
 }
 
 #search {
-  background-color: black;
   border: none;
   border-radius: 5px;
   color: white;
-  width: 250px;
-  padding: 5px;
-}
-
-#searchButton {
-  background-color: darkgrey;
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
+  height: 100px;
+  width: 300px;
 }
 
 

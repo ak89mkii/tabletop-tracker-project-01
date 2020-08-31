@@ -8,7 +8,8 @@ const gameSchema = new Schema({
     slug: String,
     gameId: Number,
     rank: Number,
-    image: String
+    image: String,
+    name: String
 }, {
   timestamps: true
 })
