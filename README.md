@@ -39,3 +39,5 @@
 // https://cloud.mongodb.com/v2
 // https://getbootstrap.com/docs/4.0/components/navs/
 // https://thenounproject.com/term/dice/10652/
+// https://medium.com/codingthesmartway-com-blog/getting-started-with-axios-166cb0035237
+// https://bgg-json.azurewebsites.net/
