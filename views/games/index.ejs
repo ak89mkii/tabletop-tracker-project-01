@@ -37,6 +37,11 @@
     <div>
         <label class="label">BoardGameGeek.com Link:</label> <%= g.link %>
     </div>
+    <form action="/<%= game.id %>/library?_method=DELETE" method="POST"> 
+    <div>
+        <input class="removeButton" type="submit" value="Remove Game">
+    </div>
+    </form>
     <% }); %>
 
 <%- include('../partials/footer') %>
