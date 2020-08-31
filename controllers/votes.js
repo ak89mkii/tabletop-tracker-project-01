@@ -6,5 +6,8 @@ module.exports = {
 }
 
 function index(req, res) {
-    res.render('votes/index')
+    Vote.find({})
+    .then(users => {
+      res.render('votes/index', { user: req.user, users })
+    })
 }

@@ -23,7 +23,7 @@ const authRouter = require('./routes/auth');
 const indexRouter = require('./routes/index');
 const gamesRouter = require('./routes/games');
 const bringsRouter = require('./routes/brings');
-// const votesRouter = require('./routes/votes');
+const votesRouter = require('./routes/votes');
 const wishlistsRouter = require('./routes/wishlists');
 
 // view engine setup
@@ -54,7 +54,7 @@ app.use('/auth', authRouter)
 app.use('/', indexRouter);
 app.use('/', gamesRouter);
 app.use('/', bringsRouter);
-// app.use('/votes', votesRouter);
+app.use('/', votesRouter);
 app.use('/', wishlistsRouter);
 
 // invalid request, send 404 page
