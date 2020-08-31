@@ -6,21 +6,36 @@
 
 <h1>Add a New Game</h1>
 <form method="POST" action="/">  
+    <label class="label">Image URL:</label>
+        <input type="text" name="imageUrl">
     <label class="label">Game Title:</label>
         <input type="text" name="title">
-    <label class="label">Number of Player:</label>
-        <input type="text"name="players">
-    <input type="submit" value="Add Game">
+    <label class="label">Min Players:</label>
+        <input type="text"name="min">
+    <label class="label">Max Players:</label>
+        <input type="text"name="max">
+    <label class="label">BGG Link:</label>
+        <input type="text"name="link">
+    <br>
+    <input class="addButton" type="submit" value="Add Game">
 </form>
 
 <h1>Library</h1>
+<% users.forEach((g) => { %>
     <div>
-        <img src="<%=  %>" class="card-img-top" alt="...">
+        <img class="gameImg" src="<%= g.imageUrl %>" alt="...">
     </div>
-    <% users.forEach((g) => { %>
     <div>
         <label class="label">Game Title:</label> <%= g.title %>
-        <label class="label">Number of Players:</label> <%= g.players %>
+    </div>
+    <div>
+        <label class="label">Min Players:</label> <%= g.min %>
+    </div>
+    <div>
+        <label class="label">Max Players:</label> <%= g.max %>
+    </div>
+    <div>
+        <label class="label">BoardGameGeek.com Link:</label> <%= g.link %>
     </div>
     <% }); %>
 

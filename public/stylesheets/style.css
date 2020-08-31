@@ -55,5 +55,26 @@ body {
   margin: 5px;
 }
 
+.label {
+  font-size: 20px;
+}
+
+.addButton {
+  background-color: #444444;
+  color:#999999;
+  border-radius: 2px;
+  border: none;
+  padding: 5px;
+}
+
+.gameImg {
+  height: 300px;
+  width:400px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 10px;
+  border-color: black;
+}
+
 
 
