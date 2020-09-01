@@ -6,7 +6,7 @@
     <h1>Tabletop Wishlist</h1>
 
 <h1>Add a New Game</h1>
-<form method="POST" action="/wishlists">  
+<form method="POST" action="/wishlists/index">  
     <label class="label">Image URL:</label>
         <input type="text" name="imageUrl">
     <label class="label">Game Title:</label>
@@ -38,7 +38,7 @@
     <div>
         <label class="label">Max Players:</label> <%= w.price %>
     </div>
-    <form action="/wishlists/<%= g.id %>?_method=DELETE" method="POST"> 
+    <form action="/wishlists/<%= w.id %>?_method=DELETE" method="POST"> 
     <div>
         <input class="removeButton" type="submit" value="Remove Game">
     </div>
