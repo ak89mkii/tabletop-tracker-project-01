@@ -1,0 +1,48 @@
+<!-- The GAME WISHLIST page -->
+
+<%- include('../partials/header') %>
+
+<body>
+    <h1>Tabletop Wishlist</h1>
+
+<h1>Add a New Game</h1>
+<form method="POST" action="/wishlists">  
+    <label class="label">Image URL:</label>
+        <input type="text" name="imageUrl">
+    <label class="label">Game Title:</label>
+        <input type="text" name="title">
+    <label class="label">Priority:</label>
+    <select name="priority">
+        <option value="DEN">Must Purchase</option>
+        <option value="DEN">Vote on It</option>
+        <option value="DEN">Not Priority</option>
+        <option value="DFW">Wait for Sale</option>
+      </select>
+    <label class="label">Price:</label>
+        <input type="text"name="price">
+    <br>
+    <input class="addButton" type="submit" value="Add Game">
+</form>
+
+<h1>Wishlist</h1>
+<% users.forEach((w) => { %>
+    <div>
+        <img class="gameImg" src="<%= w.imageUrl %>" alt="...">
+    </div>
+    <div>
+        <label class="label">Game Title:</label> <%= w.title %>
+    </div>
+    <div>
+        <label class="label">Min Players:</label> <%= w.priority %>
+    </div>
+    <div>
+        <label class="label">Max Players:</label> <%= w.price %>
+    </div>
+    <form action="/wishlists/<%= g.id %>?_method=DELETE" method="POST"> 
+    <div>
+        <input class="removeButton" type="submit" value="Remove Game">
+    </div>
+    </form>
+<% }); %>
+
+<%- include('../partials/footer') %>

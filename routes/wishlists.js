@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 const wishlistsCtrl = require('../controllers/wishlists')
 
-router.get('/wishlists/new', isLoggedIn, wishlistsCtrl.new)
-// router.post('/games/:slug/wishlists',isLoggedIn, wishlistsCtrl.create)
-// router.delete('/games/:slug/wishlists',isLoggedIn, wishlistsCtrl.delete)
+router.get('/', isLoggedIn, wishlistsCtrl.index)
+router.post('/wishlists', isLoggedIn, wishlistsCtrl.create)
+router.delete('/wishlists/:id', isLoggedIn, wishlistsCtrl.removeFromWishlist)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

@@ -1,12 +1,29 @@
 const Wishlist = require('../models/wishlist')
 
 module.exports = {
-    new: newWishlists
+    index,
+    create,
+    removeFromWishlist
 }
 
-function newWishlists(req, res) {
+function index(req, res) {
     Wishlist.find({})
     .then(users => {
-      res.render('wishlists/new', { user: req.user, users })
+      res.render('/wishlists/', { user: req.user, users })
     })
+}
+
+function create(req, res) {
+  const wish = new Wishlist(req.body)
+  wish.save(function(err) {
+    console.log(wish)
+    res.redirect('/wishlists/')
+  })
+}
+
+function removeFromWishlist(req, res) {
+  Game.findByIdAndDelete(req.params.id, function(err) {
+    console.log(req.params.id)
+    res.redirect('/wishlists/')
+  })
 }
