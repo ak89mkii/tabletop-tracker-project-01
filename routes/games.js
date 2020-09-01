@@ -9,7 +9,7 @@ router.get('/games', isLoggedIn, gamesCtrl.index)
 // router.post('/:slug/brings',isLoggedIn, gamesCtrl.addToBring)
 // router.post('/:slug/votes',isLoggedIn, gamesCtrl.addToVotePage)
 // router.post('/:slug/library',isLoggedIn, gamesCtrl.addToLibrary)
-// router.delete('/:slug/library', isLoggedIn, gamesCtrl.removeFromLibrary)
+router.delete('/games/:id', isLoggedIn, gamesCtrl.removeFromLibrary)
 // router.post('/:slug/wishlists',isLoggedIn, gamesCtrl.addToWishlist)
 // router.delete('/:slug/wishlists', isLoggedIn, gamesCtrl.removeFromWishlist)
 

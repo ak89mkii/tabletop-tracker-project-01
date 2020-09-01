@@ -6,7 +6,7 @@ module.exports = {
   create, 
   index,
 //  show,
-//  addToLibrary,
+removeFromLibrary,
 //  addToWishlist,
 //  addToBring,
 //  addToVotePage
@@ -26,6 +26,14 @@ function create(req, res) {
     res.redirect('/games/')
   })
 }
+
+function removeFromLibrary(req, res) {
+  Game.findByIdAndDelete(req.params.id, function(err) {
+    console.log(req.params.id)
+    res.redirect('/games/')
+  })
+}
+
 
 
 
