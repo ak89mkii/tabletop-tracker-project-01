@@ -1,5 +1,4 @@
 const Game = require('../models/game')
-const axios = require('axios')
 
 module.exports = {
 //     new: newGames,
@@ -20,10 +19,10 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  const game = new Game(req.body)
-  game.save(function(err) {
+  req.body.game = req.user._id
+  Game.create(req.body, function(err, game) {
     console.log(game)
-    res.redirect('/games/')
+    res.redirect(`/games/${req.user._id}`)
   })
 }
 
