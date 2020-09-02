@@ -51,13 +51,14 @@ app.use(passport.session());
 // router middleware
 // mount all routes with appropriate base paths
 app.use('/', usersRouter); 
-app.use('/auth', authRouter)
+
 // After template
 app.use('/', indexRouter);
 app.use('/', gamesRouter);
 app.use('/', bringsRouter);
 app.use('/', votesRouter);
 app.use('/', wishlistsRouter);
+app.use('/auth', authRouter) // auth
 
 // invalid request, send 404 page
 app.use(function(req, res) {

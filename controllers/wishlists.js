@@ -9,9 +9,10 @@ module.exports = {
 function index(req, res) {
     Wishlist.find({})
     .then(users => {
-      res.render('wishlists/index', { user: req.user, users })
+      res.render('wishlists/index',{ user: req.user, users })
     })
 }
+// { user: req.user, users })
 
 function create(req, res) {
   const wish = new Wishlist(req.body)

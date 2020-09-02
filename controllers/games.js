@@ -15,14 +15,14 @@ function index(req, res) {
     Game.find({})
     .then(users => {
       res.render('games/index', { user: req.user, users })
-    })
+      })
 }
 
 function create(req, res) {
-  req.body.game = req.user._id
+  req.body.id = req.user._id
   Game.create(req.body, function(err, game) {
     console.log(game)
-    res.redirect(`/games/${req.user._id}`)
+    res.redirect("/games/")
   })
 }
 
