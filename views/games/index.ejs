@@ -1,10 +1,11 @@
 <!-- The GAME COLLECTION page -->
 
 <%- include('../partials/header') %>
-
+<div class="main"></div>
 <h1>Tabletop Collection / Library</h1>
-
+<br>
 <h1>Add a New Game</h1>
+<br>
 <form method="POST" action="/">  
     <label class="label">Image URL:</label>
         <input type="text" name="imageUrl">
@@ -21,27 +22,29 @@
 </form>
 
 <h1>Library</h1>
+<br>
 <% users.forEach((g) => { %>
-    <div>
-        <img class="gameImg" src="<%= g.imageUrl %>" alt="...">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= g.imageUrl %>" alt="...">
     </div>
-    <div>
+    <div class="card-title">
         <label class="label">Game Title:</label> <%= g.title %>
     </div>
-    <div>
+    <div class="card-text">
         <label class="label">Min Players:</label> <%= g.min %>
     </div>
-    <div>
+    <div class="card-text">
         <label class="label">Max Players:</label> <%= g.max %>
     </div>
-    <div>
-        <label class="label">BoardGameGeek.com Link:</label> <%= g.link %>
+    <div class="card-text">
+        <a href="<%= g.link %>">BoardGameGeek.com Link</a>
     </div>
     <form action="/games/<%= g.id %>?_method=DELETE" method="POST"> 
-    <div>
-        <input class="removeButton" type="submit" value="Remove Game">
-    </div>
+        <div>
+            <input class="btn btn-primary" type="submit" value="Remove Game">
+        </div>
     </form>
+    <br>
 <% }); %>
 
 <%- include('../partials/footer') %>
