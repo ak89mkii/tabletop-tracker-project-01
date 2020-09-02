@@ -5,9 +5,8 @@
 <br>
 <h1>Tabletop Collection / Library</h1>
 <br>
-<h1>Add a New Game</h1>
-<br>
-<form method="POST" action="/">  
+<form class="formBar" method="POST" action="/">  
+    <h1>Add a New Game</h1>
     <label class="label">Image URL:</label>
         <input type="text" name="imageUrl">
     <label class="label">Game Title:</label>
@@ -22,7 +21,6 @@
     <input class="addButton" type="submit" value="Add Game">
 </form>
 
-<h1>Library</h1>
 <br>
 <% users.forEach((g) => { %>
     <div class="card" style="width: 18rem;">

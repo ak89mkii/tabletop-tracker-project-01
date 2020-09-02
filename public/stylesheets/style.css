@@ -37,7 +37,10 @@ body {
   text-align: center;
 }
 
-
+.formBar {
+  background-color: slategrey;
+  padding: 10px;
+}
 .nav {
   margin: 0 auto;
   align-items: center;
