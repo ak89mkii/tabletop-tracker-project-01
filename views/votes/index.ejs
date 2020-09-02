@@ -8,32 +8,20 @@
 </div>
     <h1>Vote and/or Comment Below</h1>
 <br>
-<% users.forEach((g) => { %>
+<% users.forEach((c) => { %>
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="<%= g.imageUrl %>" alt="...">
     </div>
     <div class="card-title">
-        <label class="label">Game Title:</label> <%= g.title %>
+        <label class="label">Game Title:</label> <%= c.title %>
     </div>
     <div class="card-text">
-        <label class="label">Min Players:</label> <%= g.min %>
-    </div>
-    <div class="card-text">
-        <label class="label">Max Players:</label> <%= g.max %>
-    </div>
-    <div class="card-text">
-        <a href="<%= g.link %>">BoardGameGeek.com Link</a>
+        <label class="label">Min Players:</label> <%= c.vote %>
     </div>
     <br>
     <form action="/games/<%= g.id %>?_method=DELETE" method="POST"> 
         <div>
             <input class="btn btn-danger" type="submit" value="Remove Game">
-        </div>
-    </form>
-    <br>
-    <form method="POST" action="/votes/index"> 
-        <div>
-            <input class="btn btn-warning" type="submit" value="Send to Vote">
         </div>
     </form>
     <br>
