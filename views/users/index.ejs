@@ -1,13 +1,14 @@
 <%- include('../partials/header') %>
 
-<div class="card text-center" style="width: 18rem;">
+<br>
+<h1>Welcome to DiceDex</h1>
+<div class="card-body" style="width: 18rem;">
   <div class="card-title">
-    <ul>Registered Users:
+    <h3 id="loginUsers">Registered Users:</h3>
     <% users.forEach(u => { %>
   
-      <li><%= u.name %></li>
+      <div><%= u.name %></div>
     <% }) %>
-    </ul>
   </div>
 </div>
 
