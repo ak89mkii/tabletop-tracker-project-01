@@ -18,6 +18,7 @@
     <label class="label">BGG Link:</label>
         <input type="text"name="link">
     <br>
+    <br>
     <input class="addButton" type="submit" value="Add Game">
 </form>
 
@@ -40,7 +41,7 @@
     </div>
     <form action="/games/<%= g.id %>?_method=DELETE" method="POST"> 
         <div>
-            <input class="btn btn-primary" type="submit" value="Remove Game">
+            <input class="btn btn-warning" type="submit" value="Remove Game">
         </div>
     </form>
     <br>

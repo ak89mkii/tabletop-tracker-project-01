@@ -1,18 +1,18 @@
 <!-- The GAME WISHLIST page -->
 
 <%- include('../partials/header') %>
-
-<body>
-    <h1>Tabletop Wishlist</h1>
-
-<h1>Add a New Game</h1>
-<form method="POST" action="/wishlists/index">  
+<div class="main">
+<br>
+<h1>Tabletop Wishlist</h1>
+<br>
+<form class="formBar" method="POST" action="/wishlists/index">  
+    <h1>Add a New Game</h1>
     <label class="label">Image URL:</label>
         <input type="text" name="imageUrl">
     <label class="label">Game Title:</label>
         <input type="text" name="title">
     <label class="label">Priority:</label>
-    <select name="priority">
+    <select class="label" name="priority">
         <option value="Must Purchase">Must Purchase</option>
         <option value="Vote on It">Vote on It</option>
         <option value="Not Priority">Not Priority</option>
@@ -21,28 +21,29 @@
     <label class="label">Price:</label>
         <input type="text"name="price">
     <br>
+    <br>
     <input class="addButton" type="submit" value="Add Game">
 </form>
 
-<h1>Wishlist</h1>
+<br>
 <% users.forEach((w) => { %>
-    <div>
-        <img class="gameImg" src="<%= w.imageUrl %>" alt="...">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= w.imageUrl %>" alt="...">
     </div>
-    <div>
+    <div class="card-title">
         <label class="label">Game Title:</label> <%= w.title %>
     </div>
-    <div>
+    <div class="card-text">
         <label class="label">Priority:</label> <%= w.priority %>
     </div>
-    <div>
+    <div class="card-text">
         <label class="label">Cost:</label> <%= w.price %>
     </div>
     <form action="/wishlists/<%= w.id %>?_method=DELETE" method="POST"> 
     <div>
-        <input class="removeButton" type="submit" value="Remove Game">
+        <input class="btn btn-warning" type="submit" value="Remove Game">
     </div>
     </form>
 <% }); %>
-
+</div>
 <%- include('../partials/footer') %>
