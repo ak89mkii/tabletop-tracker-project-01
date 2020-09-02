@@ -32,6 +32,12 @@ body {
   margin:0 auto;
 }
 
+.main {
+  position: relative;
+  text-align: center;
+}
+
+
 .nav {
   margin: 0 auto;
   align-items: center;
@@ -68,13 +74,7 @@ body {
   padding: 5px;
 }
 
-.gameImg {
-  height: 500px;
-  width: 500px;
-  border-style: solid;
-  border-radius: 10px;
-  border-width: 5px;
-  border-color: black;
+.card {
   margin: 0 auto;
 
 }
