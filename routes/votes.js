@@ -3,8 +3,8 @@ const router = express.Router()
 const votesCtrl = require('../controllers/votes')
 
 router.get('/votes/index', isLoggedIn, votesCtrl.index)
-// router.post('/:slug/votes', isLoggedIn, votesCtrl.create)
-// router.delete('/:slug/votes', isLoggedIn, votesCtrl.delete)
+router.post('/votes/index', isLoggedIn, votesCtrl.create)
+router.delete('/votes/:id', isLoggedIn, votesCtrl.removeFromVote)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

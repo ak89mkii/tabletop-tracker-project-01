@@ -15,10 +15,12 @@
   <nav class="nav">
     <% if (user) { %>
     <div class="navTitle">
-      <img height="50" id="avatarPhoto" src="/images/dice.png">
+      <img height="50" src="/images/dice.png">
     </div>
     <div class="navTitle">DiceDex.io (eventually)</div>
-    <div id="search" class="gcse-search"></div>
+    <div id="search">
+    <div class="gcse-search"></div>
+    </div>
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link"  href="/games">Library</a>
@@ -37,7 +39,7 @@
       </li>
     <% } else { %>
       <div class="navTitle">
-        <img height="50" id="avatarPhoto" src="/images/dice.png">
+        <img height="50" src="/images/dice.png">
       </div>
       <div class="navTitle">DiceDex.io (eventually)</div>
       <li class="nav-item">

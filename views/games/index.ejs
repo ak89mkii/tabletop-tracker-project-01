@@ -39,12 +39,20 @@
     <div class="card-text">
         <a href="<%= g.link %>">BoardGameGeek.com Link</a>
     </div>
+    <br>
     <form action="/games/<%= g.id %>?_method=DELETE" method="POST"> 
         <div>
-            <input class="btn btn-warning" type="submit" value="Remove Game">
+            <input class="btn btn-danger" type="submit" value="Remove Game">
+        </div>
+    </form>
+    <br>
+    <form method="POST" action="/votes/index"> 
+        <div>
+            <input class="btn btn-warning" type="submit" value="Send to Vote">
         </div>
     </form>
     <br>
 <% }); %>
 </div>
+
 <%- include('../partials/footer') %>
