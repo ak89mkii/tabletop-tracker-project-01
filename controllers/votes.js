@@ -4,7 +4,6 @@ module.exports = {
     index,
     create,
     removeFromVote,
-    writeComment
 }
 
 function index(req, res) {
@@ -28,9 +27,3 @@ function removeFromVote(req, res) {
     res.redirect('/votes/index')
   })
 }
-
-function writeComment(req, res) {
-    Vote.create(req.body, function(err) {
-      res.redirect('/votes/index')
-    }
-)}

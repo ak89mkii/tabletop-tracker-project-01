@@ -40,10 +40,10 @@
 <% }); %>
 
 <% users.forEach((c) => { %>
-<form class="formBar" method="POST" action="/votes/<%= c.id %>/comments">
-    <input type="text" placeholder="Write Comments Here" name="comments">
-    <input class="addButton" type="submit" value="Add Comment">
-</form>
+    <form class="formBar" method="POST" action="/votes/<%= c._id %>/comments">
+        <input type="text" placeholder="Write Comments Here" name="comments">
+        <input class="addButton" type="submit" value="Add Comment">
+    </form>
 <div>
     <label class="label">Comments:</label> <%= c.comments %>
 </div>
