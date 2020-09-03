@@ -12,7 +12,7 @@ function index(req, res) {
       res.render('votes/index', { user: req.user, users })
     })
 }
-
+      
 function create(req, res) {
     req.body.user = req.params.id
     Vote.create(req.body, function(err, vote) {

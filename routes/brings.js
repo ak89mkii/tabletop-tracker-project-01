@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 const bringsCtrl = require('../controllers/brings')
 
-router.get('/brings/new',isLoggedIn, bringsCtrl.new)
-// router.post('/:id',isLoggedIn, bringsCtrl.create)
+router.post('/brings/index', isLoggedIn, bringsCtrl.create)
+router.get('/brings/index', isLoggedIn, bringsCtrl.index)
 // router.delete('/:id',isLoggedIn, bringsCtrl.delete)
 
 function isLoggedIn(req, res, next) {

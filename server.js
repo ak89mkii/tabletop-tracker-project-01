@@ -26,7 +26,7 @@ const gamesRouter = require('./routes/games');
 const bringsRouter = require('./routes/brings');
 const votesRouter = require('./routes/votes');
 const wishlistsRouter = require('./routes/wishlists');
-const commentsRouter = require('./routes/comments');
+// const commentsRouter = require('./routes/comments');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -59,7 +59,7 @@ app.use('/', gamesRouter);
 app.use('/', bringsRouter);
 app.use('/', votesRouter);
 app.use('/', wishlistsRouter);
-app.use('/', commentsRouter);
+// app.use('/', commentsRouter);
 app.use('/auth', authRouter) // auth
 
 

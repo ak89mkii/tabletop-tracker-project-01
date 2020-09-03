@@ -3,10 +3,7 @@ const Schema = mongoose.Schema
 
 
 const bringSchema = new Schema({
-  title: String,
-  noPlayers: String,
-  whoBring: String,
-  comments: String
+  comments: {type: String},
 }, {
   timestamps: true
 });

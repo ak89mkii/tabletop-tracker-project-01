@@ -1,0 +1,20 @@
+<!-- The BRING TO EVENT page -->
+
+<!-- The COMMENTS ON GAME page -->
+
+<%- include('../partials/header') %>
+
+<form class="formBar" method="POST" action="/brings/index">
+    <input type="text" placeholder="Write Comments Here" name="say">
+    <input class="addButton" type="submit" value="Add Comment">
+</form>
+
+<% users.forEach((c) => { %>
+    <!-- Comments -->
+    <div>
+        <label class="label">Comments:</label> <%= c.comments %>
+    </div>
+    <hr/>
+<% }); %>
+
+<%- include('../partials/footer') %>
