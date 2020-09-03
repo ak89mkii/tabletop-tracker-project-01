@@ -1,14 +1,9 @@
 const Game = require('../models/game')
 
 module.exports = {
-//     new: newGames,
   create, 
   index,
-//  show,
-removeFromLibrary,
-//  addToWishlist,
-//  addToBring,
-//  addToVotePage
+  removeFromLibrary,
 }
 
 function index(req, res) {

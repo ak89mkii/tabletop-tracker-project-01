@@ -12,7 +12,6 @@ function index(req, res) {
       res.render('wishlists/index',{ user: req.user, users })
     })
 }
-// { user: req.user, users })
 
 function create(req, res) {
   req.body.name = req.user.name
