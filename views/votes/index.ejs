@@ -6,8 +6,21 @@
 <div class="pageTitle">
     <h1>Vote on a Game</h1>
 </div>
+<form class="formBar" method="POST" action="/">
     <h1>Vote and/or Comment Below</h1>
+    <label class="label">Image URL:</label>
+        <input type="text" name="imageUrl">
+    <label class="label">Game Title:</label>
+        <input type="text" name="title">
+    <label class="label">Min Players:</label>
+        <input type="text"name="min">
+    <h1>Vote and/or Comment Below</h1>
+    <br>
+    <br>
+    <input class="addButton" type="submit" value="Add Game">
+</form>
 <br>
+
 <% users.forEach((c) => { %>
     <div class="card" style="width: 18rem;">
         
