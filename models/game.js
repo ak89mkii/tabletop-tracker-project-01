@@ -7,7 +7,8 @@ const gameSchema = new Schema({
     title: {type: String},
     min: {type: Number},
     max: {type: Number},
-    link: {type: String}
+    link: {type: String},
+    name: {type: String}
 }, {
   timestamps: true
 })
