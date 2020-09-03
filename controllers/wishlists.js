@@ -15,10 +15,10 @@ function index(req, res) {
 // { user: req.user, users })
 
 function create(req, res) {
-  const wish = new Wishlist(req.body)
-  wish.save(function(err) {
-    console.log(wish)
-    res.redirect('/wishlists/index')
+  req.body.name = req.user.name
+  Wishlist.create(req.body, function(err, game) {
+    console.log(game)
+    res.redirect("/games/")
   })
 }
 
