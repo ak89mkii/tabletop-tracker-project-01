@@ -2,7 +2,8 @@ const Bring = require('../models/bring');
 
 module.exports = {
     index,
-    create
+    create,
+    deleteComment
 };
 
 function index(req, res) {
@@ -12,13 +13,12 @@ function index(req, res) {
     })
 }
 
-// function create(req, res) {
-//   const bring = new Bring(req.body)
-//   bring.save(function(err) {
-//     console.log(bring)
-//     res.render('brings/index', {  })
-//   })
-// }
+function deleteComment(req, res) {
+  Bring.findByIdAndDelete(req.params.id, function(err) {
+    console.log(req.params.id)
+    res.redirect('/brings/index')
+  })
+}
 
 function create(req, res) {
   req.body.name = req.user.name

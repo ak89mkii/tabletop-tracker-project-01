@@ -3,12 +3,11 @@
 <!-- The COMMENTS ON GAME page -->
 
 <%- include('../partials/header') %>
-
-<form class="formBar" method="POST" action="/brings/index">
-    <input type="text" placeholder="Write Comments Here" name="comments">
-    <input type="datetime-local" name="datePosted">
-    <input class="addButton" type="submit" value="Add Comment">
-</form>
+<div class="main">
+    <div class="pageTitle">
+        <h1>Tabletop Comment Board</h1>
+    </div>
+<hr/>
 
 <% users.forEach((c) => { %>
     <!-- Comments -->
@@ -21,7 +20,22 @@
     <div>
         <label class="label">Posted On:</label> <%= c.datePosted %>
     </div>
+    <form action="/brings/<%= c.id %>?_method=DELETE" method="POST">
+        <div>
+            <input class="btn btn-warning" type="submit" value="Remove Comment">
+        </div>
+    </form>
     <hr/>
 <% }); %>
+
+ 
+    <h1>Add to the Conversation</h1>
+<form class="formBar" method="POST" action="/brings/index">
+<input type="text" placeholder="Write Comments Here" name="comments">
+<input type="datetime-local" name="datePosted">
+<input class="addButton" type="submit" value="Add Comment">
+</form>
+
+</div>
 
 <%- include('../partials/footer') %>
