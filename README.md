@@ -3,7 +3,7 @@
 # Description:
 ### With this tabletop game tracker, users are able to keep track of their board game libraries, wishlists as well as add games to a "bring to event" and/or "interest vote" page.
 
-# Deployment Link: (https://git.heroku.com/tabletop-tracker-project-117.git)
+# Deployment Link: (https://tabletop-tracker-project-117.herokuapp.com/users)
 
 # Images:
 ![Tabletop Game Tracker Project ERD](public/images/readme/erd.png)
@@ -43,3 +43,4 @@
 // https://medium.com/codingthesmartway-com-blog/getting-started-with-axios-166cb0035237
 // https://stackoverflow.com/questions/12909332/how-to-logout-of-an-application-where-i-used-oauth2-to-login-with-google
 // https://github.com/Shippable/support/issues/220
+// https://stackoverflow.com/questions/41411155/does-bootstrap-4-have-a-built-in-horizontal-divider
