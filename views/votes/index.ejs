@@ -10,22 +10,23 @@
 <br>
 <% users.forEach((c) => { %>
     <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="<%= g.imageUrl %>" alt="...">
+        
     </div>
     <div class="card-title">
         <label class="label">Game Title:</label> <%= c.title %>
     </div>
     <div class="card-text">
-        <label class="label">Min Players:</label> <%= c.vote %>
+        <label class="label">Vote:</label> <%= c.vote %>
     </div>
     <br>
-    <form action="/games/<%= g.id %>?_method=DELETE" method="POST"> 
+    <form action="/votes/<%= c.id %>?_method=DELETE" method="POST"> 
         <div>
             <input class="btn btn-danger" type="submit" value="Remove Game">
         </div>
     </form>
     <br>
+    <hr/>
 <% }); %>
 </div>
-    
+
 <%- include('../partials/footer') %>

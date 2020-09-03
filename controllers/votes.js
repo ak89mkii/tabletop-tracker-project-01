@@ -1,4 +1,3 @@
-const Game = require('../models/game')
 const Vote = require('../models/vote')
 
 module.exports = {
@@ -15,11 +14,11 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  req.body.flight = req.params.id
-  Vote.create(req.body, function(err, vote) {
-    console.log(vote)
-    res.redirect('/votes/index')
-  })
+    req.body.user = req.params.id
+    Vote.create(req.body, function(err, vote) {
+      console.log(vote)
+      res.redirect('/votes/index')
+    })
 }
 
 function removeFromVote(req, res) {
