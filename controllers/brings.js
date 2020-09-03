@@ -12,11 +12,19 @@ function index(req, res) {
     })
 }
 
+// function create(req, res) {
+//   const bring = new Bring(req.body)
+//   bring.save(function(err) {
+//     console.log(bring)
+//     res.render('brings/index', {  })
+//   })
+// }
+
 function create(req, res) {
-  const bring = new Bring(req.body)
-  bring.save(function(err) {
-    console.log(bring)
-    res.render('brings/index')
+  req.body.name = req.user.name
+  Bring.create(req.body, function(err, comment) {
+    console.log(comment)
+    res.redirect("/brings/index")
   })
 }
   

@@ -5,14 +5,21 @@
 <%- include('../partials/header') %>
 
 <form class="formBar" method="POST" action="/brings/index">
-    <input type="text" placeholder="Write Comments Here" name="say">
+    <input type="text" placeholder="Write Comments Here" name="comments">
+    <input type="datetime-local" name="datePosted">
     <input class="addButton" type="submit" value="Add Comment">
 </form>
 
 <% users.forEach((c) => { %>
     <!-- Comments -->
     <div>
+        <div><%= c.name %></div>
+    </div>
+    <div>
         <label class="label">Comments:</label> <%= c.comments %>
+    </div>
+    <div>
+        <label class="label">Posted On:</label> <%= c.datePosted %>
     </div>
     <hr/>
 <% }); %>
