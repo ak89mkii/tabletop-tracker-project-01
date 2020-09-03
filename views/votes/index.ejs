@@ -21,6 +21,7 @@
 <br>
 
 <% users.forEach((c) => { %>
+
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="<%= c.imageUrl %>" alt="...">
     </div>
@@ -37,16 +38,19 @@
         </div>
     </form>
     <br>
-<% }); %>
 
-<% users.forEach((c) => { %>
-    <form class="formBar" method="POST" action="/votes/<%= c._id %>/comments">
+    <form class="formBar" method="POST" action="/votes/comments">
         <input type="text" placeholder="Write Comments Here" name="comments">
         <input class="addButton" type="submit" value="Add Comment">
     </form>
-<div>
-    <label class="label">Comments:</label> <%= c.comments %>
-</div>
+
+<% }); %>
+
+<% users.forEach((c) => { %>
+<!-- Comments -->
+    <div>
+        <label class="label">Comments:</label> <%= c.say %>
+    </div>
 <hr/>
 <% }); %>
 

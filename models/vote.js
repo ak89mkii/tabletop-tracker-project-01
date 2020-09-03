@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const commentsSchema = new Schema ({
-  comments: {type: String}
+  say: {type: String}
 }, {
   timestamps: true
 })
@@ -12,7 +12,7 @@ const voteSchema = new Schema({
   title: {type: String},
   datePosted: {type: Date},
   vote: {type: Number},
-  comments: [commentsSchema]
+  comments: {type: String}
 }, {
 timestamps: true
 })
