@@ -3,7 +3,8 @@ const Vote = require('../models/vote')
 module.exports = {
     index,
     create,
-    removeFromVote
+    removeFromVote,
+    writeComment
 }
 
 function index(req, res) {
@@ -19,7 +20,7 @@ function create(req, res) {
       console.log(vote)
       res.redirect('/votes/index')
     })
-}
+  }
 
 function removeFromVote(req, res) {
   Vote.findByIdAndDelete(req.params.id, function(err) {
@@ -27,3 +28,9 @@ function removeFromVote(req, res) {
     res.redirect('/votes/index')
   })
 }
+
+function writeComment(req, res) {
+    Vote.create(req.body, function(err) {
+      res.redirect('/votes/index')
+    }
+)}
