@@ -41,16 +41,7 @@
     </div>
     <div class="card-text">
         <a href="<%= g.link %>">BoardGameGeek.com Link</a>
-    </div>
-    <br>
-    <div>
-    <form action="/games/<%= g.id %>?_method=DELETE" method="POST">
-        <div>
-            <input class="btn btn-warning" type="submit" value="Bring to Event">
-        </div>
-    </form>
-    </div>
-    </form>
+    </div>    
     <br>
     <form action="/games/<%= g.id %>?_method=DELETE" method="POST"> 
         <div>

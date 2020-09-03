@@ -42,6 +42,7 @@
     <div class="card-text">
         <label class="label">Estimated Cost:</label> <%= w.price %>
     </div>
+    <br>
     <form action="/wishlists/<%= w.id %>?_method=DELETE" method="POST"> 
     <div>
         <input class="btn btn-danger" type="submit" value="Remove Game">
