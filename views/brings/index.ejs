@@ -12,10 +12,10 @@
     <div>
         <label class="label">Posted By:</label> <%= c.name %>
     </div>
-    <div>
+    <div class="comment">
         <label class="label">Comments:</label> <%= c.comments %>
     </div>
-    <div>
+    <div class="comment">
         <label class="label">Posted On:</label> <%= c.datePosted %>
     </div>
     <form action="/brings/<%= c.id %>?_method=DELETE" method="POST">
