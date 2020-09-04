@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <title>Error</title>
+</head>
+<body>
+    <img src="/images/dice.gif" alt="">
+    <h1>Error <span class="errorcode"><%= error.status %></span></h1>
+    <p class="comment"><%= message %></p>
+    <p class="comment"><a href="/">Return to the homepage</a>.</p>
+    <p class="comment"><pre><%= error.stack %></pre></p>
+  </div>
+  <script src="/javascripts/errors.js"></script>
+</body>
+</html>
+

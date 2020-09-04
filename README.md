@@ -50,3 +50,4 @@
 // https://github.com/Shippable/support/issues/220
 // https://stackoverflow.com/questions/41411155/does-bootstrap-4-have-a-built-in-horizontal-divider
 // https://boardgamegeek.com/
+// https://tenor.com/search/d20-gifs
