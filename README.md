@@ -23,6 +23,7 @@
 - Mongoose
 - Google APIs
 - Google Programmable Search
+- Google Fonts
 - getbootstrap.com
 - thenounproject.com
 - boardgamegeek.com
