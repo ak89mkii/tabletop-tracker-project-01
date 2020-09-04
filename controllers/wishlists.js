@@ -17,7 +17,7 @@ function create(req, res) {
   req.body.name = req.user.name
   Wishlist.create(req.body, function(err, game) {
     console.log(game)
-    res.redirect("/games/")
+    res.redirect("/wishlists/index")
   })
 }
 
