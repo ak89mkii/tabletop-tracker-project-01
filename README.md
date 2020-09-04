@@ -1,7 +1,7 @@
-# Tabletop Game Tracker Project 02:
+# DiceDex: Tabletop Game Tracker Project 02:
 
 # Description:
-### With this tabletop game tracker, users are able to keep track of their board game libraries, wishlists as well as add games to a "bring to event" and/or "interest vote" page.
+### With this tabletop game tracker, users are able to add keep track of a group sourced board game library, wishlist, as well as write comments and/or post prospective games on a vote page.
 
 # Deployment Link: (https://tabletop-tracker-project-117.herokuapp.com/users)
 
@@ -25,15 +25,20 @@
 - Google Programmable Search
 - getbootstrap.com
 - thenounproject.com
+- boardgamegeek.com
 
-# Pseudocode Outline:
+# Getting Started:
+// Heroku Deplyment: https://tabletop-tracker-project-117.herokuapp.com/users
+// Trello Board: https://trello.com/b/n5H1teBr/project-02-tabletop-game-tracker
 
+# Next Steps:
+>Add a "bring to event" page.
 
-# Detailed Pseudocode:
->
+**Game details view.**
 
-# Stretch Goals:
->
+>Enhanced user specific features:
+- Library / wishlist filter options.
+- Group create functionality.
 
 # Resources and References:
 // https://console.developers.google.com/apis/dashboard
@@ -44,3 +49,4 @@
 // https://stackoverflow.com/questions/12909332/how-to-logout-of-an-application-where-i-used-oauth2-to-login-with-google
 // https://github.com/Shippable/support/issues/220
 // https://stackoverflow.com/questions/41411155/does-bootstrap-4-have-a-built-in-horizontal-divider
+// https://boardgamegeek.com/
