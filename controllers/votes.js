@@ -1,9 +1,12 @@
 const Vote = require('../models/vote')
+const Wishlist = require('../models/wishlist')
+
 
 module.exports = {
     index,
     create,
     removeFromVote,
+    add
 }
 
 function index(req, res) {
@@ -25,5 +28,14 @@ function removeFromVote(req, res) {
   Vote.findByIdAndDelete(req.params.id, function(err) {
     console.log(req.params.id)
     res.redirect('/votes/index')
+  })
+}
+
+function add(req, res) {
+  Vote.findById(req.params.id, function(err) {
+    Wishlist.create(req.body.name, function(err, game) {
+          console.log('Added', game)
+          res.redirect('/wishlists/index')
+    })
   })
 }

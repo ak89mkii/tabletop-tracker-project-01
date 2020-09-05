@@ -4,6 +4,7 @@ const votesCtrl = require('../controllers/votes')
 
 router.get('/votes/index', isLoggedIn, votesCtrl.index)
 router.post('/votes/index', isLoggedIn, votesCtrl.create)
+router.post('/wishlists/:id/votes', isLoggedIn, votesCtrl.add)
 router.delete('/votes/:id', isLoggedIn, votesCtrl.removeFromVote)
 
 function isLoggedIn(req, res, next) {
