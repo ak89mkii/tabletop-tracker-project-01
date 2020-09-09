@@ -22,6 +22,7 @@ function deleteComment(req, res) {
 
 function create(req, res) {
   req.body.name = req.user.name
+  req.body.googleId = req.user.googleId
   Bring.create(req.body, function(err, comment) {
     console.log(comment)
     res.redirect("/brings/index")

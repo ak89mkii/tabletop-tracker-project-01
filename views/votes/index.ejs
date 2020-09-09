@@ -34,7 +34,7 @@
         <label class="label">Date Posted:</label> <%= c.datePosted %>
     </div>
     <br>
-    <% if (user.name === c.name) { %>
+    <% if (user.name === c.name && user.googleId === c.googleId) { %>
     <form action="/votes/<%= c.id %>?_method=DELETE" method="POST"> 
         <div>
             <input class="btn btn-danger" type="submit" value="Remove Game">

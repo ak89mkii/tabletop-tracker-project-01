@@ -43,7 +43,7 @@
         <label class="label">Estimated Cost:</label> <%= w.price %>
     </div>
     <br>
-    <% if (user.name === w.name) { %>
+    <% if (user.name === w.name && user.googleId === w.googleId) { %>
     <form action="/wishlists/<%= w.id %>?_method=DELETE" method="POST"> 
     <div>
         <input class="btn btn-danger" type="submit" value="Remove Game">
