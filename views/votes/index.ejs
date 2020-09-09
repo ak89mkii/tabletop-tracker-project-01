@@ -21,9 +21,6 @@
 <br>
 
 <% users.forEach((c) => { %>
-    <div>
-        <label class="label">Owner / Posted By:</label> <%= c.name %>
-    </div>
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="<%= c.imageUrl %>" alt="...">
     </div>
@@ -34,7 +31,7 @@
         <label class="label">Date Posted:</label> <%= c.datePosted %>
     </div>
     <br>
-    <% if (user.name === c.name && user.googleId === c.googleId) { %>
+    <% if (user.googleId === c.googleId) { %>
     <form action="/votes/<%= c.id %>?_method=DELETE" method="POST"> 
         <div>
             <input class="btn btn-danger" type="submit" value="Remove Game">
