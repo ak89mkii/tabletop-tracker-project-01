@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const voteSchema = new Schema({
   googleId: {type: String},
+  name: {type: String},
   imageUrl: {type: String},
   title: {type: String},
   datePosted: {type: Date},
