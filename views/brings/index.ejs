@@ -18,7 +18,7 @@
     <div class="comment">
         <label class="label">Posted On:</label> <%= c.datePosted %>
     </div>
-    <% if (user.name === "Alex Kasem") { %>
+    <% if (user.name === c.name) { %>
     <form action="/brings/<%= c.id %>?_method=DELETE" method="POST">
         <div>
             <input class="btn btn-warning" type="submit" value="Remove Comment">
