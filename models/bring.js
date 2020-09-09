@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 
 const bringSchema = new Schema({
+  googleId: {type: String},
   name: {type: String},
   comments: {type: String},
   datePosted: {type: Date},
