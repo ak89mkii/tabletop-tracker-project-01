@@ -18,6 +18,7 @@ function index(req, res) {
       
 function create(req, res) {
     req.body.user = req.params.id
+    req.body.googleId = req.user.googleId
     Vote.create(req.body, function(err, vote) {
       console.log(vote)
       res.redirect('/votes/index')

@@ -15,6 +15,7 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.name = req.user.name
+  req.body.googleId = req.user.googleId
   Game.create(req.body, function(err, game) {
     console.log(game)
     res.redirect("/games/")

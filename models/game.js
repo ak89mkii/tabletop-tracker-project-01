@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const gameSchema = new Schema({
     page: String,
+    googleId: {type: String},
     imageUrl: {type: String},
     title: {type: String},
     min: {type: Number},

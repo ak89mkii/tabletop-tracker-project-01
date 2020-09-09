@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const wishlistSchema = new Schema({
     page: String,
+    googleId: {type: String},
     name: {type: String},
     imageUrl: {type: String},
     title: {type: String},

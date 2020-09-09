@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const voteSchema = new Schema({
+  googleId: {type: String},
   imageUrl: {type: String},
   title: {type: String},
   datePosted: {type: Date},
